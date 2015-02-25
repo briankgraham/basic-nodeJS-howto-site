@@ -1,0 +1,65 @@
+<!doctype HTML>
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "bootstrap.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">nodeJS (the-how-to-guide.)</a>
+		    </div>
+		    	<div>
+		      		<ul class="nav navbar-nav">
+		        		<li class="active"><a href="howTo.html">Home</a></li>
+					</ul>
+				</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+
+	      <div class="blog-header">
+
+	        <h1 class="blog-title">Section 2:</h1>
+	      </div>
+
+	      <div class="row">
+
+	        <div class="col-sm-8 blog-main">
+
+	          <div class="blog-post">
+	            <h2 class="blog-post-title">Non-Blocking Code</h2>
+				<p><br>If you are fairly familiar with Node or JavaScript, you're probably familiar with <code>non-blocking</code> forms of code. Personally, this is kind of eye-opening because most of my code in the past has been <code>"blocking"</code> in nature.
+				<p>For example, take a look at this code:</p>
+				<p><pre><code>var fs = require("fs");<br><br>var whatsHere = fs.readFileSync('/etc/passwrd');<br><br>console.log(whatsHere);<br><br>console.log('do more things');</code></pre></p>
+				<p>So what this code does is set a variable to the readFileSync and it gets called via console.log. The file is read all the way through then the second console.log call begins.</p>
+				<p>Now check out this code:</p>
+				<p><pre><code>var fs = require('fs');<br><br>fs.readFile('index.html', function(err, whatsHere){<br>&nbsp&nbspconsole.log(whatsHere);<br><br>});</code></pre></p>
+				<p>The code above takes in a function attached to variable <code>receivedIt</code> and it's called via <code>fs.readFile</code>. The nice thing about this code is if you called another function afterwards, you could do it faster. Why? When <code>receivedIt</code> is called, it starts reading the file but immediately drops down to call the next function. Then when the file read is complete, the file data is printed to the screen.</p>
+				<p>What's great about the last code section is that it doesn't stop the program just to read a file, which is what the first section of code does. Let's say you were trying to read multiple files. You could read files concurrently with the second code but only one at a time with the first code. In summation, <code> blocking</code> slow, <code>non-blocking</code> fast.</p>
+	          </div><!-- /.blog-post -->
+				<ul class = "pager"><li> <a href = "section1.html">Previous</a></li><li> <a href = "section3.html">Next</a></li></ul>
+	        </div><!-- /.blog-main -->
+
+	        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+	          
+	          <div class="sidebar-module">
+	            <h4>Jump to Section</h4>
+	            <ol class="list-unstyled">
+	              <li><a href="section1.html">Section 1: Setting Up node.JS</a></li>
+	              <li><a href="section2.html">Section 2: Non-blocking code</a></li>
+	              <li><a href="section3.html">Section 3: Events</a></li>
+	              <li><a href="section4.html">Section 4: Streams</a></li>
+	              
+	            </ol>
+	          </div>
+	          
+	        </div><!-- /.blog-sidebar -->
+
+	      </div><!-- /.row -->
+
+	    </div><!-- /.container -->
+		
+</body>
+</html>

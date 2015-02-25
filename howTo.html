@@ -1,0 +1,82 @@
+<!doctype HTML>
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "bootstrap.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">nodeJS (the-how-to-guide.)</a>
+		    </div>
+		    	<div>
+		      		<ul class="nav navbar-nav">
+		        		<li class="active"><a href="howTo.html">Home</a></li>
+					</ul>
+				</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+
+	      <div class="blog-header">
+	      	<div class = "jumbotron">
+	        <h1 class="blog-title">Streaming with node.JS</h1>
+	        <p class="lead blog-description">&nbsp&nbsp&nbspby Brian Graham</p>
+	    	</div>
+	      </div>
+
+	      <div class="row">
+
+	        <div class="col-sm-8 blog-main">
+
+	          <div class="blog-post">
+	            <h2 class="blog-post-title">About this Guide</h2>
+	            
+
+	            <p><br>This is a little how-to-guide on using Node.JS for web applications that require real-time data.</p>
+	            <p>The guide won't teach you everything you need to know about Node, but we will go through a brief setup and a brief introduction into what Node is. Most importantly, we will go through some basics of create non-blocking code and making basic requests.
+	           
+	            <h3 class = "blog-post-title">Why Use Node.js?</h3>
+	            <p><br>Well, it's not a framework...so it won't be replacing those anytime soon. However, it does use <code>JavaScript</code> and it was built on top of Google's <code>V8 Engine</code>. V8 was built mostly via C and in general: it's fast. Node is also event driven (just like JS), but its biggest feature is the ability to initiate data communication on the client-side as well as the server-side. </p>
+	            <p>Think of it as an awesome 2-way portal with the potential for lots of flexibility and speed. In applications where you are reading and writing data back and forth, it can be very useful to increase speed and usability for the end-user. Also, it uses non-blocking code to allow fast data transfers, which we will discuss in another section.</p>
+	            <p>So in general, Node focuses on a particular need versus being something that redefines everything you do with Web Development.</p><p> The idea behind it was to create something open-source and allow for speed that will really excite the end-user and beyond that, create a whole new world of possibilities for client-server interaction. The client could send multiple requests and the server can process all of them in parallel (You could think of it like Google Hangouts). </p>
+				<p>A great example of this would be a chat application, something that would require an 2-way open socket to allow for back and forth communication instantaneously. And not just an open socket, but a socket that can be shared amongst the entire group of people in the chat.</p>
+
+	            	<p>Click the button below to get started!</p>
+	            
+	          </div><!-- /.blog-post -->
+
+	          <nav>
+	            <ul class="pager">
+	              <li><a href="section1.html">Let's Get Started</a></li>
+	            </ul>
+	          </nav>
+
+	        </div><!-- /.blog-main -->
+
+	        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+	          
+	          <div class="sidebar-module">
+	            <h4>Jump to Section</h4>
+	            <ol class="list-unstyled">
+	              <li><a href="section1.html">Section 1 - Setting Up node.JS</a></li>
+	              <li><a href="section2.html">Section 2 - Non-blocking code</a></li>
+	              <li><a href="section3.html">Section 3 - Events</a></li>
+	              <li><a href="section4.html">Section 4 - Streams</a></li>
+	              
+	            </ol>
+	          </div>
+	          
+	        </div><!-- /.blog-sidebar -->
+
+	      </div><!-- /.row -->
+
+	    </div><!-- /.container -->
+
+
+
+
+			<!--<ul class = "pager"><li> <a href = "#">Previous</a></li><li> <a href = "#">Next</a></li></ul>-->
+</body>
+</html>
